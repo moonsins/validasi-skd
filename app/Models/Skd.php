@@ -9,6 +9,8 @@ class Skd extends Model
 {
     use HasFactory;
 
+    protected $dates = ['tgl_in','tgl_out'];
+
     protected $table = 'skd';
 
     protected $fillable = ['no_surat','nama_dokter','diagnnosa','tgl_in','tgl_out','pasien_id'];

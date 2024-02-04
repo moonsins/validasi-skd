@@ -1,11 +1,20 @@
+<style>
+    table{
+        text-align: center;
+    };
+</style>
+
 @extends('layouts.master')
 
 
 
 @section('content')
+<div class="card">
+    <div class="card-header">
 <h1>Data Surat Keterangan Dokter</h1>
-
-<table class="table">
+    </div>
+    <div class="card-body">
+<table id="example2" class="table table-bordered table-hover">
     <thead>
       <tr>
         <th scope="col">No</th>
@@ -27,8 +36,8 @@
         <td>{{$value ->no_surat}}</td>
         <td>{{$value ->nama_dokter}}</td>
         <td>{{$value ->diagnosa}}</td>
-        <td>{{$value ->tgl_in}}</td>
-        <td>{{$value ->tgl_out}}</td>
+        <td>{{$value ->tgl_in->format('d M Y')}}</td>
+        <td>{{$value ->tgl_out->format('d M Y')}}</td>
         <td>
             <form action="/ds/{{$value->id}}" method="POST">
                 @csrf
@@ -53,4 +62,6 @@
 @endforelse
     </tbody>
   </table>
+</div>
+</div>
 @endsection

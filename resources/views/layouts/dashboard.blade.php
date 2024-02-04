@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="{{ asset('img/favicon.ico') }}" rel="icon">
+    <link href="{{ asset('klinik/img/favicon.ico') }}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -132,19 +132,19 @@
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                 <div class="owl-carousel header-carousel">
                     <div class="owl-carousel-item position-relative">
-                        <img class="img-fluid" src="img/carousel-1.jpg" alt="">
+                        <img class="img-fluid" src="{{asset('klinik/img/footage-1.jpg')}}" alt="">
                         <div class="owl-carousel-text">
                             <h1 class="display-1 text-white mb-0">Cardiology</h1>
                         </div>
                     </div>
                     <div class="owl-carousel-item position-relative">
-                        <img class="img-fluid" src="img/carousel-2.jpg" alt="">
+                        <img class="img-fluid" src="{{asset('klinik/img/carousel-2.jpg')}}" alt="">
                         <div class="owl-carousel-text">
                             <h1 class="display-1 text-white mb-0">Neurology</h1>
                         </div>
                     </div>
                     <div class="owl-carousel-item position-relative">
-                        <img class="img-fluid" src="img/carousel-3.jpg" alt="">
+                        <img class="img-fluid" src="{{asset('klinik/img/carousel-3.jpg')}}" alt="">
                         <div class="owl-carousel-text">
                             <h1 class="display-1 text-white mb-0">Pulmonary</h1>
                         </div>
@@ -162,8 +162,8 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="d-flex flex-column">
-                        <img class="img-fluid rounded w-75 align-self-end" src="img/about-1.jpg" alt="">
-                        <img class="img-fluid rounded w-50 bg-white pt-3 pe-3" src="img/about-2.jpg" alt="" style="margin-top: -25%;">
+                        <img class="img-fluid rounded w-75 align-self-end" src="{{asset('klinik/img/about-1.jpg')}}" alt="">
+                        <img class="img-fluid rounded w-50 bg-white pt-3 pe-3" src="{{asset('klinik/img/about-2.jpg')}}" alt="" style="margin-top: -25%;">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
@@ -315,7 +315,7 @@
                 </div>
                 <div class="col-lg-6 pe-lg-0 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/feature.jpg" style="object-fit: cover;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100" src="{{asset('klinik/img/feature.jpg')}}" style="object-fit: cover;" alt="">
                     </div>
                 </div>
             </div>
@@ -335,7 +335,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-1.jpg" alt="">
+                            <img class="img-fluid" src="{{asset('klinik/img/team-1.jpg')}}" alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
                             <h5>Doctor Name</h5>
@@ -351,7 +351,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-2.jpg" alt="">
+                            <img class="img-fluid" src="{{asset('klinik/img/team-2.jpg')}}" alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
                             <h5>Doctor Name</h5>
@@ -367,7 +367,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-3.jpg" alt="">
+                            <img class="img-fluid" src="{{asset('klinik/img/team-3.jpg')}}" alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
                             <h5>Doctor Name</h5>
@@ -383,7 +383,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-4.jpg" alt="">
+                            <img class="img-fluid" src="{{asset('klinik/img/team-4.jpg')}}" alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
                             <h5>Doctor Name</h5>
@@ -489,7 +489,7 @@
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
                 <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="img/testimonial-1.jpg" style="width: 100px; height: 100px;">
+                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="{{asset('klinik/img/testimonial-1.jpg')}}" style="width: 100px; height: 100px;">
                     <div class="testimonial-text rounded text-center p-4">
                         <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
                         <h5 class="mb-1">Patient Name</h5>
@@ -497,7 +497,7 @@
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="img/testimonial-2.jpg" style="width: 100px; height: 100px;">
+                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="{{asset('klinik/img/testimonial-2.jpg')}}" style="width: 100px; height: 100px;">
                     <div class="testimonial-text rounded text-center p-4">
                         <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
                         <h5 class="mb-1">Patient Name</h5>
@@ -505,7 +505,7 @@
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="img/testimonial-3.jpg" style="width: 100px; height: 100px;">
+                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="{{asset('klinik/img/testimonial-3.jpg')}}" style="width: 100px; height: 100px;">
                     <div class="testimonial-text rounded text-center p-4">
                         <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
                         <h5 class="mb-1">Patient Name</h5>

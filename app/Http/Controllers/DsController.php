@@ -14,19 +14,10 @@ class DsController extends Controller
 {
     public function index()
     {
-        $ds = Ds::get();
+        $ds = Ds::all();
 
         return view('ds.tampil', ['ds' => $ds]);
     }
-
-    // public function create($id)
-    // {
-
-    //     $skd = Skd::where('id', $id)->first();
-
-    //     return view('ds.tambah',  ['skd' => $skd]);
-
-    // }
 
     public function store(Request $request, $id)
     {
@@ -34,22 +25,17 @@ class DsController extends Controller
         $skd = Skd::where('id', $id)->first();
         $dpasien = Pasien::where('id', $skd->pasien_id)->select('nik', 'tgllahir')->get();
 
-        $hash = hash('sha512',$dpasien);
-        $qrname =($skd ->no_surat).'_'.time().'.svg';
-        $qrimage = QrCode::size(200)->generate($hash, '../public/qrcodes/'.$qrname );
+        $hash = hash('sha512', $dpasien);
+        $qrname = ($skd->no_surat) . '_' . time() . '.svg';
+        $qrimage = QrCode::size(200)->generate($hash, '../public/qrcodes/' . $qrname);
 
-
-        $ds= Ds::insert([
+        $ds = Ds::insert([
             'hash' => $hash,
             'qrcode' => $qrname,
-            'skd_id'=> $id,
+            'skd_id' => $id,
         ]);
 
         return redirect('/ds');
-
-    }
-
-    public function cetak_skd(){
 
     }
 }

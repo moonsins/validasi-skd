@@ -2,9 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DsController;
+use App\Http\Controllers\PdfController;
 use App\Http\Controllers\SkdController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PasienController;
+use App\Http\Controllers\ValidasiController;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +38,13 @@ Route::put('/skd/{skd_id}', [SkdController::class,'update']);
 Route::delete('/skd/{skd}', [SkdController::class,'destroy']);
 
 Route::get('/ds', [DsController::class, 'index']);
-Route::get('/ds/{skd_id}/create', [DsController::class,'creat']);
 Route::post('/ds/{skd_id}', [DsController::class,'store']);
-Route::get('/ds/cetak_skd', [DsController::class, 'cetak_skd']);
+Route::delete('/skd/{skd}', [DsController::class,'destroy']);
+Route::get('/pdf/{ds_id}/cetakpdf', [PdfController::class, 'view_pdf']);
+
+Route::get('/validasi', [ValidasiController::class, 'dashboard']);
+
+Route::get('/scan', [ValidasiController::class,'scanner'])->name('scan');
+
+Route::get('/hasil/{dsid}', [ValidasiController::class, 'hasil'])->name('hasil');
+

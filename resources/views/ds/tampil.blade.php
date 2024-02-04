@@ -1,11 +1,21 @@
+
+<style>
+    table{
+        text-align: center;
+    };
+</style>
+
 @extends('layouts.master')
 
 
 
 @section('content')
+<div class="card">
+    <div class="card-header">
 <h1>Digital Signatured Surat Keterangan Dokter</h1>
-
-<table class="table">
+    </div>
+    <div class="card-body">
+<table id="example2" class="table table-bordered table-hover">
     <thead>
       <tr>
         <th scope="col">No</th>
@@ -20,16 +30,11 @@
     <tr>
         <td>{{$key + 1}}</td>
         <td>{{$value ->skd->no_surat}}</td>
-        <td>{{$value ->hash}}</td>
-        <td>{{$value ->qrcode}}</td>
-        <td>
-            <form action="/ds/{{$value->id}}" method="POST">
-                @csrf
-                @method('DELETE')
-                <a href="" class="btn btn-info btn-sm">Download</a>
-                <input type="submit" value="Delete" class="btn btn-danger btn-sm">
-            </form>
+        <td>{{substr($value->hash,0,30)."....."}}</td>
+        <td> <img style="height: 100px; width: 100px;" src="{{asset('qrcodes/'.$value->qrcode)}}" alt=""></td>
+        <td><a href="/pdf/{{$value->id}}/cetakpdf" class="btn btn-info btn-sm">Download</a>
         </td>
+
     </tr>
 @empty
     <tr>
@@ -39,4 +44,6 @@
 @endforelse
     </tbody>
   </table>
+</div>
+</div>
 @endsection

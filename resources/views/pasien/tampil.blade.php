@@ -1,12 +1,22 @@
+<style>
+    table{
+        text-align: center;
+    };
+</style>
+
 @extends('layouts.master')
 
 
 
 @section('content')
+<div class="card">
+    <div class="card-header">
     <h1>Data Pasien</h1>
-    <a href="/pasien/create" class="btn btn-primary btn-sm">Tambah</a>
+    </div>
+    <div class="card-body">
+    <a href="/pasien/create" class="btn btn-primary btn-sm mb-3">Tambah</a>
 
-    <table class="table">
+    <table id="example2" class="table table-bordered table-hover">
         <thead>
             <tr>
                 <th scope="col">No</th>
@@ -31,7 +41,7 @@
                     <td>{{ $value->alamat }}</td>
                     <td>{{ $value->no_hp }}</td>
                     <td>{{ $value->tmptlahir }}</td>
-                    <td>{{ $value->tgllahir }}</td>
+                    <td>{{ $value->tgllahir->format('d M Y') }}</td>
                     <td><a href="/skd/{{ $value->id }}/create" class="btn btn-success btn-sm">Buat SKD</a></td>
                     <td>
                         <form action="/pasien/{{ $value->id }}" method="POST">
@@ -49,4 +59,7 @@
             @endforelse
         </tbody>
     </table>
+    </div>
+<!-- /.card-body -->
+</div>
 @endsection
